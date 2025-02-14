@@ -1,0 +1,561 @@
+/* 主题颜色 - 使用更现代的配色方案 */
+:root {
+    --primary-50: #f0f7ff;
+    --primary-100: #e0eefe;
+    --primary-200: #b9ddfd;
+    --primary-300: #7cc2fc;
+    --primary-400: #36a6f9;
+    --primary-500: #0c87ee;
+    --primary-600: #0266cc;
+    --accent-50: #fff7ed;
+    --accent-100: #ffedd5;
+    --accent-200: #fed7aa;
+    --accent-300: #fdba74;
+    --accent-400: #fb923c;
+    --text-primary: #1a2b3c;
+    --text-secondary: #4a5568;
+    --background: #f8fafc;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* 页面布局 */
+.block-container {
+    padding: 2rem 1.5rem !important;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.stApp {
+    background-color: var(--background);
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 添加新的容器类 */
+.content-container {
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* 标题样式 */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+/* 卡片基础样式 */
+.card-base {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-base:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* 地图容器 */
+.map-container {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    margin-left: -4rem; /* 增加负边距，使地图进一步向左移动 */
+    width: calc(100% + 4rem); /* 相应调整宽度 */
+}
+
+/* 数据框架 */
+.stDataFrame {
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin: 1rem 2rem;
+    font-size: 10px !important;
+}
+
+/* 指标样式 */
+div[data-testid="stMetricValue"] {
+    background-color: var(--card-bg);
+    padding: 1.25rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--primary-400);
+}
+
+/* 动态滚动视图样式 */
+.dynamic-scroll {
+    max-height: 600px;
+    overflow-y: auto;
+    padding: 1.25rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    font-size: 14px !important;
+    margin-top: 0 !important;
+}
+
+/* 地图相关样式 */
+.element-container:has(iframe) {
+    height: 520px !important;
+    width: 75% !important;  /* 减小宽度，增加左右边距 */
+    margin: 2rem auto 0 !important;
+    padding: 0 !important;
+}
+
+.stfolium {
+    width: 100% !important;
+    height: 520px !important;  /* 匹配容器高度 */
+    border-radius: 12px !important;
+    box-shadow: var(--shadow);
+    margin: 0 auto !important;
+}
+
+.stfolium > iframe {
+    width: 100% !important;
+    height: 520px !important;  /* 匹配容器高度 */
+    border: none !important;
+    border-radius: 12px !important;
+}
+
+/* 调整地图列的样式 */
+div[data-testid="column"]:nth-of-type(2) {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    padding-top: 2rem !important;
+    padding-left: 2rem !important;  /* 增加左边距 */
+    padding-right: 2rem !important; /* 增加右边距 */
+}
+
+/* 移除之前的负边距设置 */
+div.st-emotion-cache-1v0mbdj > div:nth-child(2) {
+    margin-left: 0 !important;
+    width: 100% !important;
+}
+
+/* 移除之前的定位设置 */
+div.element-container div.stfolium {
+    position: static !important;
+    left: auto !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+}
+
+/* 确保列之间的间距一致 */
+.st-emotion-cache-1qnaue1,
+.st-emotion-cache-0,
+.st-emotion-cache-b95f0i,
+.st-emotion-cache-hoyt61 {
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 1rem !important;
+}
+
+/* 移除可能影响对齐的样式 */
+div.element-container:has(.stfolium) {
+    margin: 2rem auto 0 !important;  /* 增加顶部间距 */
+    padding: 0 !important;
+}
+
+/* 按钮样式 */
+.stButton > button {
+    background-color: var(--primary-500) !important;
+    color: white !important;
+    border: none !important;
+    padding: 0.5rem 1.5rem !important;
+    border-radius: 8px !important;
+    font-weight: 500 !important;
+    transition: all 0.2s !important;
+}
+
+.stButton > button:hover {
+    background-color: var(--primary-600) !important;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow);
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--primary-50);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-200);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-300);
+}
+
+/* 响应式布局优化 */
+@media screen and (max-width: 1200px) {
+    .block-container {
+        padding: 1.5rem 1rem !important;
+    }
+    
+    .stfolium, .stfolium > iframe {
+        height: 500px !important;
+    }
+    
+    .dynamic-scroll {
+        max-height: 500px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .block-container {
+        padding: 1rem !important;
+    }
+    
+    .card-base, .map-container {
+        padding: 1rem;
+    }
+    
+    .stfolium {
+        width: calc(100% + 1rem) !important;
+        height: 500px !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .stfolium > iframe {
+        height: 500px !important;
+    }
+    
+    div.element-container:has(.stfolium) {
+        margin-right: -1rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .dynamic-scroll {
+        max-height: 400px;
+    }
+    
+    .map-container {
+        margin-left: -2rem; /* 在小屏幕上相应调整 */
+        width: calc(100% + 2rem);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .map-container {
+        margin-left: -1rem; /* 在更小的屏幕上相应调整 */
+        width: calc(100% + 1rem);
+    }
+    
+    .stfolium {
+        width: 100% !important;
+        height: 400px !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .stfolium > iframe {
+        height: 400px !important;
+    }
+    
+    div.element-container:has(.stfolium) {
+        margin-right: 0 !important;
+        margin-bottom: 1rem !important;
+    }
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from { 
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dashboard-card {
+    animation: fadeIn 0.4s ease-out;
+}
+
+/* 隐藏Streamlit默认元素 */
+#MainMenu, footer, header {
+    visibility: hidden !important;
+}
+
+/* 数据表格样式优化 */
+.dataframe {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid var(--primary-100);
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 11px !important;
+}
+
+/* 调整表格列宽 */
+div[data-testid="stDataFrameResizable"] {
+    width: 100% !important;
+}
+
+div[data-testid="stDataFrameResizable"] table {
+    table-layout: fixed !important;
+    width: 100% !important;
+}
+
+/* 设置第一列（站点名称）宽度 */
+div[data-testid="stDataFrameResizable"] td:first-child,
+div[data-testid="stDataFrameResizable"] th:first-child {
+    width: 65% !important;
+    max-width: none !important;
+    text-align: left !important;
+}
+
+/* 设置数字列宽度 */
+div[data-testid="stDataFrameResizable"] td:not(:first-child),
+div[data-testid="stDataFrameResizable"] th:not(:first-child) {
+    width: 17.5% !important;
+    max-width: none !important;
+    text-align: center !important;
+}
+
+/* 调整表格单元格样式 */
+div[data-testid="stDataFrameResizable"] td, 
+div[data-testid="stDataFrameResizable"] th {
+    padding: 4px 8px !important;
+    font-size: 11px !important;
+    border: 1px solid #e0e0e0 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+/* 表格头部样式 */
+div[data-testid="stDataFrameResizable"] th {
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    background-color: #f8f9fa !important;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1) !important;
+    padding: 8px !important;
+    height: 32px !important;
+}
+
+/* 调整表格行高 */
+div[data-testid="stDataFrameResizable"] tr {
+    height: 24px !important;
+}
+
+/* 表格容器样式 */
+div[data-testid="stDataFrameResizable"] {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+}
+
+/* 覆盖垂直块的padding */
+div[data-testid="stVerticalBlock"] > div {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* 确保所有容器没有多余的padding */
+div[class*="stVerticalBlock"] {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    gap: 0 !important;
+}
+
+/* 移除特定元素的padding */
+div[data-testid="stVerticalBlock"] > div {
+    padding: 0 !important;
+}
+
+.element-container {
+    margin: 0 !important;
+}
+
+/* 按钮对齐 */
+.row-widget.stButton {
+    text-align: center;
+}
+
+/* 警告框 */
+.stAlert {
+    background-color: white;
+    border: none;
+    padding: 0.5rem;
+}
+
+/* 地图容器样式 */
+[data-testid="stContainer"] {
+    background: white;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 0 !important;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 地图标题样式 */
+.stMarkdown h3 {
+    margin: 1rem !important;
+    color: var(--text-primary);
+}
+
+/* 确保地图填充容器 */
+.element-container:has(iframe) {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+}
+
+/* 移除多余的padding */
+div[data-testid="stVerticalBlock"] {
+    padding: 0 !important;
+    gap: 0 !important;
+}
+
+/* 确保地图容器占满可用空间 */
+[data-testid="column"] {
+    width: 100% !important;
+    padding: 0 !important;
+}
+
+/* Streamlit 列布局调整 */
+div.st-emotion-cache-1y4p8pa {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+div.st-emotion-cache-1v0mbdj > div:nth-child(2) {
+    margin-left: -4rem !important;
+    width: calc(100% + 4rem) !important;
+}
+
+/* 地图容器样式 */
+div.element-container div.stfolium {
+    width: 100% !important;
+    height: 600px !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    position: relative;
+    left: -4rem;
+    width: calc(100% + 8rem) !important;
+    margin-right: 1rem !important;
+}
+
+div.element-container div.stfolium > iframe {
+    width: 100% !important;
+    height: 600px !important;
+    border: none !important;
+}
+
+/* 响应式布局调整 */
+@media screen and (max-width: 768px) {
+    div.st-emotion-cache-1v0mbdj > div:nth-child(2) {
+        margin-left: -2rem !important;
+        width: calc(100% + 2rem) !important;
+    }
+    
+    div.element-container div.stfolium {
+        left: -2rem;
+        width: calc(100% + 4rem) !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    div.st-emotion-cache-1v0mbdj > div:nth-child(2) {
+        margin-left: -1rem !important;
+        width: calc(100% + 1rem) !important;
+    }
+    
+    div.element-container div.stfolium {
+        left: -1rem;
+        width: calc(100% + 2rem) !important;
+    }
+}
+
+/* 确保地图容器的父元素不会限制溢出 */
+div.element-container {
+    overflow: visible !important;
+}
+
+div.st-emotion-cache-1v0mbdj {
+    overflow: visible !important;
+}
+
+div.st-emotion-cache-1y4p8pa {
+    overflow: visible !important;
+}
+
+/* 移除可能影响定位的默认样式 */
+.stApp > div:first-child {
+    overflow: visible !important;
+}
+
+.block-container {
+    overflow: visible !important;
+    max-width: none !important;
+}
+
+/* 确保其他列的布局正常 */
+[data-testid="column"]:nth-of-type(1),
+[data-testid="column"]:nth-of-type(3) {
+    padding: 0 !important;
+}
+
+/* 地图容器样式 */
+.stfolium {
+    width: 100% !important;
+    height: 600px !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.stfolium > iframe {
+    width: 100% !important;
+    height: 600px !important;
+    border: none !important;
+}
+
+/* 调整右侧表格容器的左侧边距 */
+div[data-testid="column"]:nth-of-type(3) {
+    padding-left: 1rem !important;
+}
+
+.loading-message {
+    background-color: #f0f2f6;
+    color: #0066cc;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    text-align: center;
+    font-weight: bold;
+}
